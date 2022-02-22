@@ -1,8 +1,9 @@
 import './App.scss';
+import LandingPage from './components/LandingPage/LandingPage'
 
 function App() {
   return (
-    <h1>BrainFlix</h1>
+    <LandingPage />
   );
 }
 
