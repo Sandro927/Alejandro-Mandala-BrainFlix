@@ -1,0 +1,44 @@
+@use "./colours" as c;
+
+@mixin tablet {
+    @media screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: 1280px) {
+        @content;
+    }
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin flex-middle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flex-space {
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin desktop-center {
+    max-width: 63.75rem;
+    margin: 0 auto;
+}
+
+@mixin brainflix-button {
+    background-color: c.$brainflix-blue;
+    color: c.$brainnetflix-white;
+}
