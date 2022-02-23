@@ -46,5 +46,13 @@
 
 @mixin brainflix-button {
     background-color: c.$brainflix-blue;
-    color: c.$brainnetflix-white;
+    color: c.$brainflix-white;
+    border: none;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    height: 2.5rem;
+    min-width: 9.375rem;
+    padding: 0 2rem;
+    margin-top: 1rem;
+    position: relative;
 }

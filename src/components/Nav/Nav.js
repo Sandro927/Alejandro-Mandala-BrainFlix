@@ -11,12 +11,16 @@ function Nav() {
               <img className="nav__logo" src={logo} alt='BrainFlix Logo' />
             </a>
 
-            <div>
-              <form>
-                <input  type='text' placeholder='Search' />
+            <div className="nav__container">
+              <form className="nav__form">
+                <span className="material-icons">search</span>
+                <input className="nav__input" type='text' placeholder='Search' />
               </form>
               <img className="nav__avatar" src={avatar} alt='Avatar'/>
-              <button>UPLOAD</button>
+              <button className="nav__button">
+                <span class="material-icons nav__span">file_upload</span>
+                UPLOAD
+              </button>
             </div>
           
         </div>
