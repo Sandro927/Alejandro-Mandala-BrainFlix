@@ -1,9 +1,9 @@
 import './App.scss';
-import LandingPage from './components/LandingPage/LandingPage'
+import ActiveVideo from './components/ActiveVideo/ActiveVideo'
 
 function App() {
   return (
-    <LandingPage />
+    <ActiveVideo />
   );
 }
 
