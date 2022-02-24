@@ -1,8 +1,9 @@
 import React from 'react'
 import './VideoDetails.scss'
+import ReactTimeAgo from 'react-time-ago'
 
 function VideoDetails({videoData}) {
-    console.log(videoData);
+    
   return (
    <section className="details">
         <div className="details__content"> 
@@ -13,7 +14,7 @@ function VideoDetails({videoData}) {
             <div className="details__stats">
                 <div className="details__container">
                     <p className="details__info">By {videoData.channel}</p>
-                    <p className="details__info">{videoData.timestamp}</p>
+                    <p className="details__info"><ReactTimeAgo date={videoData.timestamp} locale="en-US"/></p>
                 </div>
                 <div className="details__container">
                     <p className="details__counter">{videoData.views}</p>
