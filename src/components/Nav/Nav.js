@@ -18,7 +18,7 @@ function Nav() {
               </form>
               <img className="nav__avatar" src={avatar} alt='Avatar'/>
               <button className="nav__button">
-                <span class="material-icons nav__span">file_upload</span>
+                <span className="material-icons nav__span">file_upload</span>
                 UPLOAD
               </button>
             </div>

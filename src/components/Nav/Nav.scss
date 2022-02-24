@@ -3,14 +3,32 @@
 
 .nav {
     padding: 1rem;
+    @include tablet {
+        padding: 1rem 1.5rem;
+    }
 
     &__content {
         @include flex-col-center;
         align-items: center;
+
+        @include tablet {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        @include desktop {
+            width: 1020px;
+            margin: 0 auto;
+        }
     }
     
     &__link {
         display: flex;
+        padding-bottom: 1rem;
+
+        @include tablet {
+            padding: 0;
+        }
     }
 
     &__logo {
@@ -22,9 +40,15 @@
 
     &__form {
         flex-grow: 1;
-        margin-right: 10px;
+        margin-right: 12px;
         display: flex;
-        border: 1px solid c.$brainflix-mercury
+        border: 1px solid c.$brainflix-mercury;
+
+        @include tablet {
+            width: auto;
+            flex-grow: 0;
+            margin-right: 24px;
+        }
     }
 
 
@@ -34,12 +58,23 @@
         flex-wrap: wrap;
         width: 100%;
         align-items: center;
+
+        @include tablet {
+            width: auto;
+         
+        }
+
     }
 
     &__avatar {
         border-radius: 50%;
         width: 36px;
         height: 36px;
+
+        @include tablet {
+            order: 3;   
+        }
+        
     }
 
     &__input {
@@ -55,6 +90,13 @@
     &__button {
         width: 100%;
         @include brainflix-button;
+
+        @include tablet {
+            width: auto;
+            margin-top: 0;
+            margin-right: 24px;
+            
+        }
     }
 
     &__span{
