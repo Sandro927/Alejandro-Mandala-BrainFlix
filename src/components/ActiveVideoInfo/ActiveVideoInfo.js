@@ -1,12 +1,10 @@
 import React from 'react'
-import './VideoDetails.scss'
 import ReactTimeAgo from 'react-time-ago'
+import './ActiveVideoInfo.scss'
 
-function VideoDetails({videoData}) {
-    
+function ActiveVideoInfo({videoData}) {
   return (
-   <section className="details">
-        <div className="details__content"> 
+    <div className="details__content"> 
             <div className="details__header">
                 <h1 className="details__title">{videoData.title}</h1>
             </div>
@@ -27,8 +25,7 @@ function VideoDetails({videoData}) {
             </div>
 
         </div>
-   </section>
   )
 }
 
-export default VideoDetails
+export default ActiveVideoInfo
