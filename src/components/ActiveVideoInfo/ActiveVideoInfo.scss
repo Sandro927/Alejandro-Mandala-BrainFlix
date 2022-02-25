@@ -2,13 +2,9 @@
 @use '../../styles/partials/colours.scss' as c;
 
 .details {
+    padding: 1.5rem 1rem;
 
-    &__content {
-        padding: 1.5rem 1rem;
-
-        @include desktop {
-            width: 60%;
-        }
+    @include desktop {
+        width: 60%;
     }
-
 }

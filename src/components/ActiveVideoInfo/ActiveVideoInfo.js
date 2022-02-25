@@ -4,7 +4,7 @@ import './ActiveVideoInfo.scss'
 
 function ActiveVideoInfo({videoData}) {
   return (
-    <div className="details__content"> 
+    <div className="details"> 
             <div className="details__header">
                 <h1 className="details__title">{videoData.title}</h1>
             </div>
