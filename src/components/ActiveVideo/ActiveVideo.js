@@ -29,7 +29,7 @@ export class ActiveVideo extends Component {
         <VideoHero posterImage={this.state.currentVideoData.image}/>
         <div className="container">
           <VideoDetails videoData={this.state.currentVideoData}/>
-          <VideoList />
+          <VideoList videos={this.state.videos}/>
         </div>
         
       </>
