@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
 import Nav from '../Nav/Nav'
-import Hero from '../Hero/Hero'
+import VideoHero from '../VideoHero/VideoHero'
 import VideoDetails from '../VideoDetails/VideoDetails'
+import VideoList from '../VideoList/VideoList'
 import Videos from '../../data/videos.json'
 import VideoData from '../../data/video-details.json'
+import './ActiveVideo.scss'
 
 export class ActiveVideo extends Component {
 
@@ -13,13 +15,23 @@ export class ActiveVideo extends Component {
     activeVideoId: Videos[0].id
   }
 
+  changeActiveVideo = (id) => {
+    this.setState({
+      activeVideoId: id
+    })
+  }
+
   render() {
 
     return (
       <>
         <Nav />
-        <Hero posterImage={this.state.currentVideoData.image}/>
-        <VideoDetails videoData={this.state.currentVideoData}/>
+        <VideoHero posterImage={this.state.currentVideoData.image}/>
+        <div className="container">
+          <VideoDetails videoData={this.state.currentVideoData}/>
+          <VideoList />
+        </div>
+        
       </>
     )
   }

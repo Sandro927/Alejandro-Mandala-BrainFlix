@@ -1,9 +1,9 @@
 import React from 'react'
-import './Hero.scss'
+import './VideoHero.scss'
 
 
 
-function Hero(props) {
+function VideoHero(props) {
   return (
     <section className="hero">
         <div className="hero__content">
@@ -15,4 +15,4 @@ function Hero(props) {
   )
 }
 
-export default Hero
+export default VideoHero

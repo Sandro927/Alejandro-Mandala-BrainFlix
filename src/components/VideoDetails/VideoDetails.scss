@@ -5,6 +5,10 @@
 
     &__content {
         padding: 1.5rem 1rem;
+
+        @include desktop {
+            width: 60%;
+        }
     }
 
 }
