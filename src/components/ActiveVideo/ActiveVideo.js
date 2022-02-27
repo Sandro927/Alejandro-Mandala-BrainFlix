@@ -17,8 +17,10 @@ export class ActiveVideo extends Component {
 
   changeActiveVideo = (id) => {
     this.setState({
-      activeVideoId: id
+      activeVideoId: id,
+      // currentVideoData: VideoData.find(video => video.id === this.state.activeVideoId).id
     })
+    console.log(VideoData.find(video => video.id === this.state.activeVideoId).id)
   }
 
   render() {
@@ -29,7 +31,7 @@ export class ActiveVideo extends Component {
         <VideoHero posterImage={this.state.currentVideoData.image}/>
         <div className="container">
           <ActiveVideoDetails videoData={this.state.currentVideoData}/>
-          <NextVideoList videos={this.state.videos} activeVideoId={this.state.activeVideoId}/>
+          <NextVideoList videos={this.state.videos} activeVideoId={this.state.activeVideoId} changeActiveVideo={this.changeActiveVideo}/>
         </div>
         
       </>

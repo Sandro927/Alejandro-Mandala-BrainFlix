@@ -1,16 +1,23 @@
 import React from 'react'
 import './NextVideo.scss'
 
-function NextVideo(props) {
-  return (
-    <div className="video">
-        <img className="video__image" src={props.video.image} />
-        <div className="video__details">
-            <p className="video__title">{props.video.title}</p>
-            <p className="video__author">{props.video.channel}</p>
-        </div>
-    </div>
-  )
+class NextVideo extends React.Component {
+
+  handleClick = () => {
+    this.props.changeActiveVideo(this.props.video.id);
+  }
+  
+render() {
+    return (
+      <div className="video" onClick={this.handleClick}>
+          <img className="video__image" src={this.props.video.image} />
+          <div className="video__details">
+              <p className="video__title">{this.props.video.title}</p>
+              <p className="video__author">{this.props.video.channel}</p>
+          </div>
+      </div>
+    )
+  }
 }
 
 export default NextVideo

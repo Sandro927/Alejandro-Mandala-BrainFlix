@@ -3,6 +3,7 @@ import ReactTimeAgo from 'react-time-ago'
 import './ActiveVideoInfo.scss'
 
 function ActiveVideoInfo({videoData}) {
+
   return (
     <div className="details"> 
             <div className="details__header">
