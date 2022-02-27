@@ -5,6 +5,7 @@ class NextVideo extends React.Component {
 
   handleClick = () => {
     this.props.changeActiveVideo(this.props.video.id);
+
   }
   
 render() {
