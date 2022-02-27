@@ -4,6 +4,14 @@
 .comments {
     padding: 0 1rem;
 
+    &__new {
+        display: flex;
+    }
+
+    &__avatar {
+        width: 50%;
+        border-radius: 50%;
+    }
 
 
 
