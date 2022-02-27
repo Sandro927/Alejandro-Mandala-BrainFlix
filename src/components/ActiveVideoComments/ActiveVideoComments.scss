@@ -9,7 +9,8 @@
     }
 
     &__avatar {
-        width: 50%;
+        max-width: 36px;
+        max-height: 36px;
         border-radius: 50%;
     }
 

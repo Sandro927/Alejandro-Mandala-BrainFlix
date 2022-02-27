@@ -19,7 +19,6 @@ export class ActiveVideo extends Component {
     this.setState({
       activeVideoData: this.state.videoData.find(video => video.id === id)
     })
-    console.log(this.state.activeVideoData)
   }
 
   render() {
