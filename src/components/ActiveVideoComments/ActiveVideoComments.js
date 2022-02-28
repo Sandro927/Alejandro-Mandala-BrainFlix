@@ -4,20 +4,21 @@ import Comment from '../Comment/Comment'
 import './ActiveVideoComments.scss'
 import AddCommentIcon from '@mui/icons-material/AddComment';
 
-function ActiveVideoComments({activeVideoData}) {
+function ActiveVideoComments({ activeVideoData }) {
   return (
     <section className="comments">
       <p className="comments__counter">{`${activeVideoData.comments.length} Comments`}</p>
-
       <div className="comments__new">
         <img className="comments__avatar" src={avatar} />
         <form className="comments__form">
-          <label className='comments__label' htmlFor='newComment'>JOIN THE CONVERSATION</label>
-          <textarea className="comments__textarea" id="newComment" name="newComment" rows="5" placeholder="Add a new comment"/>
-          <button className="comments__button" type="submit"><AddCommentIcon className="comments__icon"/>COMMENT</button>
+          <div className="comments__input">
+            <label className='comments__label' htmlFor='newComment'>JOIN THE CONVERSATION</label>
+            <textarea className="comments__textarea" id="newComment" name="newComment" rows="5" placeholder="Add a new comment" />
+          </div>
+          <button className="comments__button" type="submit"><AddCommentIcon className="comments__icon" />COMMENT</button>
         </form>
       </div>
-      {activeVideoData.comments.map((comment, index) => <Comment comment={comment} key={`${activeVideoData.id}-${index}`} lastComment={index === activeVideoData.comments.length - 1 ? true : false}/>)}
+      {activeVideoData.comments.map((comment, index) => <Comment comment={comment} key={`${activeVideoData.id}-${index}`} lastComment={index === activeVideoData.comments.length - 1 ? true : false} />)}
     </section>
   )
 }

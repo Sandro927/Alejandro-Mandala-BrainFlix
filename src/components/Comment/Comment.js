@@ -10,7 +10,9 @@ function Comment({comment, lastComment}) {
         <div className="comment__details">
             <div className="comment__header">
                 <p className="comment__author">{comment.name}</p>
-                <p className="comment__timestamp"><ReactTimeAgo date={comment.timestamp} locale="en-US"/></p>
+                <p className="comment__timestamp">
+                  <ReactTimeAgo date={comment.timestamp} locale="en-US"/>
+                </p>
             </div>
             <p className="comment__body">{comment.comment}</p>
         </div>

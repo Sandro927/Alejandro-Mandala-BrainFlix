@@ -12,7 +12,6 @@ function Nav() {
             <a className="nav__link" href='/'>
               <img className="nav__logo" src={logo} alt='BrainFlix Logo' />
             </a>
-
             <div className="nav__body">
               <form className="nav__form">
                 <SearchIcon className="nav__searchIcon"/>

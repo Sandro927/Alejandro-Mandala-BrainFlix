@@ -4,6 +4,10 @@
 .comments {
     padding: 0 1rem;
 
+    @include tablet {
+        padding: 0 2.25rem;
+    }
+
     &__new {
         display: flex;
     }
@@ -23,6 +27,10 @@
     &__form {
         @include flex-column;
         flex-grow: 1;
+
+        @include tablet {
+            flex-direction: row;
+        }
     }
 
     &__label {
@@ -36,6 +44,11 @@
         padding: 1rem;
         resize: none;
         border-color: c.$brainflix-mercury;
+
+        @include tablet {
+            height: 1rem;
+            margin-right: 24px;
+        }
     }
 
     &__textarea::placeholder {
@@ -58,5 +71,11 @@
         top: 50%;
         transform: translateY(-50%);
         margin-left: 0.5rem;
+    }
+
+    &__input {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
     }
 }

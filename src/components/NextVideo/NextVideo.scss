@@ -3,8 +3,9 @@
 
 .video {
     padding-bottom: 1rem;
-
     display: flex;
+    max-width: 375px;
+    cursor: pointer;
 
     &__image {
         width: 150px;

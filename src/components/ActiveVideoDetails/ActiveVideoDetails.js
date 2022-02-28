@@ -4,7 +4,6 @@ import ActiveVideoInfo from '../ActiveVideoInfo/ActiveVideoInfo'
 import ActiveVideoComments from '../ActiveVideoComments/ActiveVideoComments'
 
 function ActiveVideoDetails(props) {
-    
   return (
    <section>
         <ActiveVideoInfo activeVideoData={props.activeVideoData}/>

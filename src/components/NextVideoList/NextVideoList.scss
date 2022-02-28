@@ -4,6 +4,10 @@
 .videos {
     padding: 0 1rem;
 
+    @include tablet {
+        padding: 0 2.25rem;
+    }
+
     &__title {
         padding: 1.5rem 0;
         color: c.$brainflix-silver;

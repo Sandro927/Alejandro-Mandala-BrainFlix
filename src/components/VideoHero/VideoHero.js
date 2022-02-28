@@ -1,8 +1,6 @@
 import React from 'react'
 import './VideoHero.scss'
 
-
-
 function VideoHero(props) {
   return (
     <section className="hero">
