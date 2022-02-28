@@ -1,10 +1,9 @@
-@use '../../styles/partials/mixins.scss' as *;
-@use '../../styles/partials/colours.scss' as c;
+@use "../../styles/partials/mixins.scss" as *;
+@use "../../styles/partials/colours.scss" as c;
 
 .video {
-
     padding-bottom: 1rem;
-    
+
     display: flex;
 
     &__image {

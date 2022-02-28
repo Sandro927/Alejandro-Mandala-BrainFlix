@@ -1,5 +1,5 @@
-@use '../../styles/partials/mixins.scss' as *;
-@use '../../styles/partials/colours.scss' as c;
+@use "../../styles/partials/mixins.scss" as *;
+@use "../../styles/partials/colours.scss" as c;
 
 .nav {
     padding: 1rem;
@@ -17,10 +17,10 @@
         }
 
         @include desktop {
-           @include desktop-center;
+            @include desktop-center;
         }
     }
-    
+
     &__link {
         display: flex;
         padding-bottom: 1rem;
@@ -42,6 +42,8 @@
         margin-right: 12px;
         display: flex;
         border: 1px solid c.$brainflix-mercury;
+        border-radius: 4px;
+        align-items: center;
 
         @include tablet {
             width: auto;
@@ -50,9 +52,7 @@
         }
     }
 
-
-
-    &__container {
+    &__body {
         display: flex;
         flex-wrap: wrap;
         width: 100%;
@@ -60,9 +60,7 @@
 
         @include tablet {
             width: auto;
-         
         }
-
     }
 
     &__avatar {
@@ -71,15 +69,15 @@
         height: 36px;
 
         @include tablet {
-            order: 3;   
+            order: 3;
         }
-        
     }
 
     &__input {
         width: 100%;
         box-sizing: border-box;
         border: none;
+        padding: 12px;
     }
 
     &__label {
@@ -95,15 +93,22 @@
             width: auto;
             margin-top: 0;
             margin-right: 24px;
-            
         }
     }
 
-    &__icon {
+    &__button:hover {
+        background-color: c.$brainflix-darkBlue;
+    }
+
+    &__searchIcon {
+        margin-left: 0.5rem;
+    }
+
+    &__uploadIcon {
         position: absolute;
         left: 0;
         top: 50%;
         transform: translateY(-50%);
-        margin-left: .5rem;
+        margin-left: 0.5rem;
     }
 }

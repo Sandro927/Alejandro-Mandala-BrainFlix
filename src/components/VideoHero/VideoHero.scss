@@ -1,12 +1,11 @@
-@use '../../styles/partials/mixins.scss' as *;
-@use '../../styles/partials/colours.scss' as c;
+@use "../../styles/partials/mixins.scss" as *;
+@use "../../styles/partials/colours.scss" as c;
 
 .hero {
     background-color: c.$brainflix-darkBlack;
     width: 100%;
 
     &__content {
-
         @include tablet {
             padding: 0 36px;
             box-sizing: border-box;
@@ -21,6 +20,5 @@
         width: 100%;
         box-sizing: border-box;
         display: block;
-
     }
 }
