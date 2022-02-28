@@ -27,7 +27,7 @@
     }
 
     &__container {
-        padding: 1rem 4.375rem 1rem 0;
+        padding: 1rem 0;
 
         @include tablet {
             display: flex;
@@ -35,11 +35,17 @@
         }
     }
 
+    &__container--marginLeft {
+        margin-left: 5rem;
+    }
+
     &__author {
+        font-size: .8125rem;
         font-weight: 600;
     }
 
     &__timestamp {
+        font-size: .8125rem;
         padding-top: 1rem;
         color: c.$brainflix-silver;
 
@@ -49,6 +55,7 @@
     }
 
     &__stats {
+        font-size: .8125rem;
         display: flex;
         align-items: center;
         border-bottom: 1px solid c.$brainflix-mercury;
@@ -78,6 +85,7 @@
     }
 
     &__text {
+        font-size: .8125rem;
         line-height: 1.5rem;
 
         @include tablet {

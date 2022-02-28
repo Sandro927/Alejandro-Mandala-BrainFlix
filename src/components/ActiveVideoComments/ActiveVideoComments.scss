@@ -24,6 +24,7 @@
     }
 
     &__counter {
+        font-size: .8125rem;
         font-weight: 700;
         padding-bottom: 24px;
     }
@@ -62,7 +63,7 @@
     &__button {
         margin: 1.5rem 0;
         @include brainflix-button;
-        position: relative;
+
     }
 
     &__button:hover {
