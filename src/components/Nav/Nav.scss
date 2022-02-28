@@ -44,6 +44,7 @@
         border: 1px solid c.$brainflix-mercury;
         border-radius: 4px;
         align-items: center;
+        background-color: c.$brainflix-alabaster;
 
         @include tablet {
             width: auto;
@@ -78,6 +79,7 @@
         box-sizing: border-box;
         border: none;
         padding: 12px;
+        background-color: c.$brainflix-alabaster;
     }
 
     &__label {
