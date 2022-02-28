@@ -23,10 +23,17 @@
     }
 
     &__author {
+        font-size: .875rem; 
         font-weight: 700;
     }
 
     &__timestamp {
         color: c.$brainflix-silver;
+        font-size: .875rem; 
+    }
+
+    &__body {
+        font-size: .875rem; 
+        line-height: 20px;
     }
 }

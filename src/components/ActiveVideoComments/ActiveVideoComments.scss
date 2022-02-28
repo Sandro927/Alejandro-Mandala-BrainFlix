@@ -40,7 +40,8 @@
 
     &__label {
         color: c.$brainflix-silver;
-        font-size: 14px;
+        font-size: 12px;
+        padding-bottom: 0.5rem;
     }
 
     &__textarea {
@@ -49,6 +50,7 @@
         padding: 1rem;
         resize: none;
         border-color: c.$brainflix-mercury;
+        font-size: 12px;
 
         @include tablet {
             height: 1rem;
