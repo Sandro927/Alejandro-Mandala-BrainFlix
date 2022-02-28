@@ -1,0 +1,33 @@
+@use '../../styles/partials/mixins.scss' as *;
+@use '../../styles/partials/colours.scss' as c;
+
+.comment {
+    display: flex;
+    border-top: 1px solid c.$brainflix-mercury;
+    padding: 1rem 0;
+
+    &--borderBottom {
+        border-bottom: 1px solid c.$brainflix-mercury;
+    }
+
+    &__avatar {
+        max-width: 36px;
+        max-height: 36px;
+        border-radius: 50%;
+        margin: 0 1rem 0 0 ;
+    }
+
+    &__header {
+        @include flex-space;
+        padding-bottom: 1rem
+    }
+
+    &__author {
+        font-weight: 700;
+    }
+
+    &__timestamp {
+        color: c.$brainflix-silver;
+    }
+    
+}

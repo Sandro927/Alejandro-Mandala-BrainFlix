@@ -7,9 +7,7 @@ class NextVideoList extends React.Component {
   render () {
     return (
       <section className="videos">
-          <div className="videos__header">
-              <h6 className="videos__title">NEXT VIDEOS</h6>
-          </div>
+        <h5 className="videos__title">NEXT VIDEOS</h5>
           {this.props.videos
               .filter(video => video.id !== this.props.activeVideoData.id)
               .map(video => 

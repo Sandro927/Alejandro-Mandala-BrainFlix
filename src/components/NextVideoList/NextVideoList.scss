@@ -1,7 +1,12 @@
+@use '../../styles/partials/mixins.scss' as *;
+@use '../../styles/partials/colours.scss' as c;
+
 .videos {
     padding: 0 1rem;
 
-    &__header {
-        padding-bottom: 16px;
+    &__title {
+        padding: 1.5rem 0;
+        color: c.$brainflix-silver;
+        font-weight: 400;
     }
 }

@@ -13,11 +13,11 @@ function ActiveVideoComments({activeVideoData}) {
         <img className="comments__avatar" src={avatar} />
         <form className="comments__form">
           <label className='comments__label' htmlFor='newComment'>JOIN THE CONVERSATION</label>
-          <textarea className="comments__textarea" id="newComment" name="newComment" rows="4" placeholder="Add a new comment"/>
+          <textarea className="comments__textarea" id="newComment" name="newComment" rows="5" placeholder="Add a new comment"/>
           <button className="comments__button" type="submit"><AddCommentIcon className="comments__icon"/>COMMENT</button>
         </form>
       </div>
-      {activeVideoData.comments.map((comment, index) => <Comment comment={comment} key={`${activeVideoData.id}-${index}`}/>)}
+      {activeVideoData.comments.map((comment, index) => <Comment comment={comment} key={`${activeVideoData.id}-${index}`} lastComment={index === activeVideoData.comments.length - 1 ? true : false}/>)}
     </section>
   )
 }

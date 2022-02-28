@@ -1,11 +1,25 @@
-
+@use '../../styles/partials/mixins.scss' as *;
+@use '../../styles/partials/colours.scss' as c;
 
 .video {
+
+    padding-bottom: 1rem;
     
     display: flex;
 
     &__image {
         width: 30%;
         border-radius: 4px;
+    }
+
+    &__details {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-left: 1rem
+    }
+
+    &__title {
+        font-weight: 700;
     }
 }
