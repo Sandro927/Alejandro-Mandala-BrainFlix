@@ -9,11 +9,26 @@
     }
 
     &__header {
-        padding-bottom: 1.5rem
+        padding-bottom: 1.5rem;
+
+        @include tablet {
+            padding-bottom: 0.5rem;
+        }
+    }
+
+    &__title {
+        @include tablet {
+            font-size: 2.0625rem;
+        }
     }
 
     &__container {
         padding: 16px 0;
+
+        @include tablet {
+            display: flex;
+            padding: 8px 0;
+        }
     }
 
     &__author {
@@ -23,6 +38,10 @@
     &__timestamp {
         padding-top: 1rem;
         color: c.$brainflix-silver;
+
+        @include tablet {
+            padding: 0 36px 0;
+        }
     }
 
     &__stats {
@@ -31,16 +50,30 @@
         align-items: center;
         border-bottom: 1px solid c.$brainflix-mercury;
         border-top: 1px solid c.$brainflix-mercury;
+
+        @include tablet {
+            border-top: none;
+        }
     }
 
     &__counter {
         display: flex;
         align-items: center;
         color: c.$brainflix-silver;
+        @include tablet {
+            padding: 0 0 0 36px;
+        }
     }
 
     &__icon {
         padding-right: 0.5rem;
     }
 
+    &__body {
+        padding-top: 1rem;
+    }
+
+    &__text {
+        line-height: 1.5rem;
+    }
 }
