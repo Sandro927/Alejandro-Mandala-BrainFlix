@@ -1,11 +1,13 @@
 @use "../../styles/partials/mixins.scss" as *;
 @use "../../styles/partials/colours.scss" as c;
 
-.container {
+.content {
     display: flex;
     flex-direction: column;
 
     @include desktop {
+        width: 1020px;
+        margin: 0 auto;
         flex-direction: row;
     }
 }

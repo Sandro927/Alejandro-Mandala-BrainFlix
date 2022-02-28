@@ -26,7 +26,7 @@ export class ActiveVideo extends Component {
       <>
         <Nav />
         <VideoHero posterImage={this.state.activeVideoData.image}/>
-        <div className="container">
+        <div className="content">
           <ActiveVideoDetails activeVideoData={this.state.activeVideoData}/>
           <NextVideoList videos={this.state.videos} activeVideoData={this.state.activeVideoData} changeActiveVideo={this.changeActiveVideo}/>
         </div>

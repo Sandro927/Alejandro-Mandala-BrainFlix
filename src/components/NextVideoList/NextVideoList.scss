@@ -8,6 +8,11 @@
         padding: 0 2.25rem;
     }
 
+    @include desktop {
+        padding-right: 0;
+        border-left: 1px solid c.$brainflix-mercury;
+    }
+
     &__title {
         padding: 1.5rem 0;
         color: c.$brainflix-silver;
