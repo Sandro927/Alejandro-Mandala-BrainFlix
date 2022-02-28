@@ -27,6 +27,10 @@
         font-size: .8125rem;
         font-weight: 700;
         padding-bottom: 24px;
+
+        @include tablet {
+            font-size: .875rem;
+        }
     }
 
     &__form {
@@ -42,6 +46,10 @@
         color: c.$brainflix-silver;
         font-size: 12px;
         padding-bottom: 0.5rem;
+
+        @include tablet {
+            font-size: .875rem;
+        }
     }
 
     &__textarea {
