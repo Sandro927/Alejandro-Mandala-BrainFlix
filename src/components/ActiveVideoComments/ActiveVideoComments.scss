@@ -12,11 +12,47 @@
         max-width: 36px;
         max-height: 36px;
         border-radius: 50%;
+        margin: 1rem 1rem 0 0;
     }
 
-
+    &__counter {
+        font-weight: 700;
+        padding-bottom: 24px;
+    }
 
     &__form {
         @include flex-column;
+        flex-grow: 1;
+    }
+
+    &__label {
+        color: c.$brainflix-silver;
+        font-size: 14px;
+    }
+    
+    &__textarea {
+        border-radius: 4px;
+        background-color: c.$brainflix-alabaster;
+        padding: 1rem;
+        resize: none;
+        border-color: c.$brainflix-mercury;
+        }
+
+    &__textarea::placeholder {
+        color: c.$brainflix-black;
+    }
+
+    &__button {
+        margin: 1rem 0;
+        @include brainflix-button;
+        position: relative;
+    }
+
+    &__icon {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-left: .5rem;
     }
 }

@@ -2,6 +2,7 @@ import React from 'react'
 import './Nav.scss'
 import logo from '../../assets/images/logo/BrainFlix-logo.svg'
 import avatar from '../../assets/images/images/Mohan-muruge.jpg'
+import UploadIcon from '@mui/icons-material/Upload';
 
 function Nav() {
   return (
@@ -18,8 +19,7 @@ function Nav() {
               </form>
               <img className="nav__avatar" src={avatar} alt='Avatar'/>
               <button className="nav__button">
-                <span className="material-icons nav__span">file_upload</span>
-                UPLOAD
+                <UploadIcon className="nav__icon"/>UPLOAD
               </button>
             </div>
           
