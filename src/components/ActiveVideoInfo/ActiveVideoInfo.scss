@@ -7,4 +7,40 @@
     @include desktop {
         width: 60%;
     }
+
+    &__header {
+        padding-bottom: 1.5rem
+    }
+
+    &__container {
+        padding: 16px 0;
+    }
+
+    &__author {
+        font-weight: 600;
+    }
+
+    &__timestamp {
+        padding-top: 1rem;
+        color: c.$brainflix-silver;
+    }
+
+    &__stats {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid c.$brainflix-mercury;
+        border-top: 1px solid c.$brainflix-mercury;
+    }
+
+    &__counter {
+        display: flex;
+        align-items: center;
+        color: c.$brainflix-silver;
+    }
+
+    &__icon {
+        padding-right: 0.5rem;
+    }
+
 }

@@ -2,7 +2,7 @@
 @use './styles/partials/colours.scss' as c;
 @use './styles/partials/mixins.scss';
 
-body, h1, h2, h3, h4, h5, h6, input {
+body, p, h1, h2, h3, h4, h5, h6, input {
     font-family: 'Avenir Next';
     margin: 0;
     padding: 0;

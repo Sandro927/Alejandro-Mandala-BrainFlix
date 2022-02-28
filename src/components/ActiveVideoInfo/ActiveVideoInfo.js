@@ -14,12 +14,12 @@ function ActiveVideoInfo({activeVideoData}) {
             
             <div className="details__stats">
                 <div className="details__container">
-                    <p className="details__info">By {activeVideoData.channel}</p>
-                    <p className="details__info"><ReactTimeAgo date={activeVideoData.timestamp} locale="en-US"/></p>
+                    <p className="details__author">By {activeVideoData.channel}</p>
+                    <p className="details__timestamp"><ReactTimeAgo date={activeVideoData.timestamp} locale="en-US"/></p>
                 </div>
                 <div className="details__container">
-                    <p className="details__counter"><VisibilityIcon />{activeVideoData.views}</p>
-                    <p className="details__counter"><FavoriteIcon />{activeVideoData.likes}</p>
+                    <p className="details__counter"><span className="details__icon"><VisibilityIcon /></span>{activeVideoData.views}</p>
+                    <p className="details__counter"><span className="details__icon"><FavoriteIcon /></span>{activeVideoData.likes}</p>
                 </div>
             </div>
 
