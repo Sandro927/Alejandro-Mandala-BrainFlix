@@ -1,3 +1,9 @@
+@use "../../styles/partials/mixins.scss" as *;
+@use "../../styles/partials/colours.scss" as c;
+
 .videoSection {
-    width: 75%;
+    @include desktop{
+        width: 75%;   
+    }
+    
 }

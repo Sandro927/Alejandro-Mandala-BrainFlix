@@ -35,6 +35,10 @@
         @include tablet {
             font-size: .875rem;
         }
+
+        @include desktop { 
+            font-size: .8125rem;
+        }
     }
 
     &__author {
