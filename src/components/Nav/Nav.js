@@ -4,6 +4,7 @@ import logo from '../../assets/images/logo/BrainFlix-logo.svg'
 import avatar from '../../assets/images/images/Mohan-muruge.jpg'
 import UploadIcon from '@mui/icons-material/Upload';
 import SearchIcon from '@mui/icons-material/Search';
+import { Link } from 'react-router-dom'
 
 function Nav() {
   return (

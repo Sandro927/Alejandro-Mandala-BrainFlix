@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Nav from '../Nav/Nav'
 import VideoHero from '../VideoHero/VideoHero'
 import ActiveVideoDetails from '../ActiveVideoDetails/ActiveVideoDetails'
 import NextVideoList from '../NextVideoList/NextVideoList'
@@ -39,7 +38,7 @@ export class ActiveVideo extends Component {
   render() {
     return (
       <>
-        <Nav />
+        
         <VideoHero posterImage={this.state.activeVideoData.image}/>
         <div className="content">
           <ActiveVideoDetails activeVideoData={this.state.activeVideoData}/>
