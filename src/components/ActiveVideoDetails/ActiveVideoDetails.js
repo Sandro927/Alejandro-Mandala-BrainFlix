@@ -5,7 +5,7 @@ import ActiveVideoComments from '../ActiveVideoComments/ActiveVideoComments'
 
 function ActiveVideoDetails(props) {
   return (
-   <section>
+   <section className="videoSection">
         <ActiveVideoInfo activeVideoData={props.activeVideoData}/>
         <ActiveVideoComments activeVideoData={props.activeVideoData}/>
    </section>

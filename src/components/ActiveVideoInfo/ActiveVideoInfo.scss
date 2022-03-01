@@ -10,6 +10,7 @@
 
     @include desktop {
         padding-left: 0;
+        padding-right: 0;
     }
 
     &__header {
@@ -36,8 +37,9 @@
         }
     }
 
-    &__container--marginLeft {
+    &__container--marginX {
         margin-left: 5rem;
+        margin-right: 24px;
     }
 
     &__author {
@@ -98,6 +100,10 @@
 
         @include tablet {
             font-size: .875rem;
+        }
+
+        @include desktop {
+            padding-right: 1.5rem;
         }
     }
 }

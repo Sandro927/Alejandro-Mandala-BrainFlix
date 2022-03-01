@@ -6,6 +6,10 @@
     border-top: 1px solid c.$brainflix-mercury;
     padding: 1rem 0;
 
+    @include desktop {
+        padding-right: 1.5rem;
+    }
+
     &--borderBottom {
         border-bottom: 1px solid c.$brainflix-mercury;
     }

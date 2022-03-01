@@ -10,10 +10,15 @@
 
     @include desktop {
         padding-left: 0;
+        padding-right: 0;
     }
 
     &__new {
         display: flex;
+
+        @include desktop {
+            padding-right: 1.5rem
+        }
     }
 
     &__avatar {
