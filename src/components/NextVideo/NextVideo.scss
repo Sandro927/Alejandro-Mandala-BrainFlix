@@ -4,7 +4,7 @@
 .video {
     padding-bottom: 1rem;
     display: flex;
-    max-width: 375px;
+    max-width: 300px;
     cursor: pointer;
 
     &__thumbnail {
@@ -31,6 +31,10 @@
     &__title {
         font-size: .8125rem;
         font-weight: 700;
+
+        @include tablet {
+            font-size: .875rem;
+        }
     }
 
     &__author {

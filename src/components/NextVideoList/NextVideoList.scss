@@ -18,5 +18,9 @@
         color: c.$brainflix-silver;
         font-weight: 400;
         font-size: .8125rem;
+
+        @include tablet {
+            font-size: 14px;
+        }
     }
 }
