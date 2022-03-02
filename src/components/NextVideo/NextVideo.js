@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './NextVideo.scss'
 
 class NextVideo extends React.Component {
@@ -8,7 +9,7 @@ render() {
     return (
       <div className="video">
           <div className="video__thumbnail">
-            <img className="video__image" src={this.props.video.image} />
+            <Link to={`/${this.props.video.id}`}><img className="video__image" src={this.props.video.image} /></Link>
           </div>
           
           <div className="video__details">
