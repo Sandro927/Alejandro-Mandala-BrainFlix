@@ -10,9 +10,9 @@ function Nav() {
   return (
     <section className="nav">
         <div className="nav__content">
-            <a className="nav__link" href='/'>
+            <Link to='/' className="nav__link">
               <img className="nav__logo" src={logo} alt='BrainFlix Logo' />
-            </a>
+            </Link>
             <div className="nav__body">
               <form className="nav__form">
                 <SearchIcon className="nav__searchIcon"/>

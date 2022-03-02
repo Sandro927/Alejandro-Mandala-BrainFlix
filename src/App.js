@@ -3,16 +3,18 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import ActiveVideo from './components/ActiveVideo/ActiveVideo'
 import Upload from './components/Upload/Upload'
 import Nav from './components/Nav/Nav'
+import PageNotFound from './components/PageNotFound/PageNotFound'
 
 function App() {
   return (
     <>
-      <Nav />
       <Router>
+      <Nav />
         <Switch>
           <Route path="/" exact component={ActiveVideo}/>
           <Route path="/upload" component={Upload} />
-          <Route path="/:videoId" component={ActiveVideo} />
+          <Route path="/:videoId" render={(routerProps) => <ActiveVideo {...routerProps}/>} />
+          <Route component={PageNotFound} />
         </Switch>
       </Router>
       

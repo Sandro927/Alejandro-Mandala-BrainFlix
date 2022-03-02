@@ -1,5 +1,6 @@
 import React from 'react'
 import NextVideo from '../NextVideo/NextVideo'
+import { Link } from 'react-router-dom'
 import './NextVideoList.scss'
 
 class NextVideoList extends React.Component {
@@ -9,7 +10,10 @@ class NextVideoList extends React.Component {
         <h5 className="videos__title">NEXT VIDEOS</h5>
           {this.props.videos
             .filter(video => video.id !== this.props.activeVideoData.id)
-            .map(video => <NextVideo key={video.id} video={video} changeActiveVideo={this.props.changeActiveVideo}/>)}
+            .map(video => 
+              <Link to={`/${video.id}`} key={video.id}>
+                <NextVideo video={video}/>
+              </Link>)}
       </section>
     )
   }

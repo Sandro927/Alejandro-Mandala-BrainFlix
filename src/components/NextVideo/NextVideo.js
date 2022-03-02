@@ -3,14 +3,10 @@ import './NextVideo.scss'
 
 class NextVideo extends React.Component {
 
-  handleClick = () => {
-    this.props.changeActiveVideo(this.props.video.id);
-
-  }
   
 render() {
     return (
-      <div className="video" onClick={this.handleClick}>
+      <div className="video">
           <div className="video__thumbnail">
             <img className="video__image" src={this.props.video.image} />
           </div>
