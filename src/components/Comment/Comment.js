@@ -6,7 +6,7 @@ import './Comment.scss'
 function Comment({comment, lastComment}) {
   return (
     <div className={!lastComment ?  "comment" : "comment comment--borderBottom"}>
-        <img className="comment__avatar" src={avatar}/>
+        <img className="comment__avatar" src={avatar} alt='avatar'/>
         <div className="comment__details">
             <div className="comment__header">
                 <p className="comment__author">{comment.name}</p>

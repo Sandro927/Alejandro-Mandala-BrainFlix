@@ -9,14 +9,13 @@ function ActiveVideoComments({ activeVideoData }) {
   function handleSubmit(e) {
     e.preventDefault();
     console.log('submitted', e.target.newComment.value)
-    
   }
 
   return (
     <section className="comments">
       <p className="comments__counter">{`${activeVideoData.comments.length} Comments`}</p>
       <div className="comments__new">
-        <img className="comments__avatar" src={avatar} />
+        <img className="comments__avatar" src={avatar} alt="avatar"/>
         <form className="comments__form" onSubmit={handleSubmit}>
           <div className="comments__input">
             <label className='comments__label' htmlFor='newComment'>JOIN THE CONVERSATION</label>
@@ -27,7 +26,15 @@ function ActiveVideoComments({ activeVideoData }) {
           </button>
         </form>
       </div>
-      {activeVideoData.comments.map((comment, index) => <Comment comment={comment} key={`${activeVideoData.id}-${index}`} lastComment={index === activeVideoData.comments.length - 1 ? true : false} />)}
+      {
+        activeVideoData.comments.map((comment, index) => 
+          <Comment 
+            comment={comment} 
+            key={`${activeVideoData.id}-${index}`} 
+            lastComment={index === activeVideoData.comments.length - 1 ? true : false} 
+          />
+        )
+      }
     </section>
   )
 }

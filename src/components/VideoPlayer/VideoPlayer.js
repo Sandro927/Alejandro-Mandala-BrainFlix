@@ -1,14 +1,12 @@
 import React, { Component } from 'react'
-import { Redirect } from 'react-router-dom'
 import VideoHero from '../VideoHero/VideoHero'
 import ActiveVideoDetails from '../ActiveVideoDetails/ActiveVideoDetails'
 import NextVideoList from '../NextVideoList/NextVideoList'
-import VideoData from '../../data/video-details.json'
-import './ActiveVideo.scss'
+import './VideoPlayer.scss'
 import axios from 'axios';
 
 const API_KEY = "a10e75f8-75fb-4de7-857f-8aa90025dc69";
-export class ActiveVideo extends Component {
+export class VideoPlayer extends Component {
 
   state = {
     videos: [],
@@ -67,4 +65,4 @@ export class ActiveVideo extends Component {
   }
 }
 
-export default ActiveVideo
+export default VideoPlayer

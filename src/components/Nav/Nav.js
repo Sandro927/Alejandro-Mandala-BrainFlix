@@ -19,9 +19,7 @@ function Nav() {
                 <input className="nav__input" type='text' placeholder='Search' />
               </form>
               <img className="nav__avatar" src={avatar} alt='Avatar'/>
-              <button className="nav__button">
-                <UploadIcon className="nav__uploadIcon"/>UPLOAD
-              </button>
+              <Link to='/upload' className="nav__upload">Upload</Link>
             </div>
           
         </div>
