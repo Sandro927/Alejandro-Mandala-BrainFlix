@@ -99,6 +99,7 @@
         font-weight: 700;
         @include flex-middle;
         text-decoration: none;
+        position: relative;
         
 
         @include tablet {
@@ -112,8 +113,6 @@
     &__upload:hover {
         background-color: c.$brainflix-darkBlue;
     }
-
-
 
     &__searchIcon {
         margin-left: 0.5rem;
