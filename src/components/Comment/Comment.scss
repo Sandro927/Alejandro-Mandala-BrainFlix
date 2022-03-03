@@ -15,7 +15,11 @@
 
         @include desktop {
             border-bottom: none;
-        }
+        } 
+    }
+
+    &__details {
+        flex-grow: 1;
     }
 
     &__avatar {
