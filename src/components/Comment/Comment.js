@@ -1,12 +1,11 @@
 import React from 'react'
 import ReactTimeAgo from 'react-time-ago'
-import avatar from '../../assets/images/images/Mohan-muruge.jpg'
 import './Comment.scss'
 
 function Comment({comment, lastComment}) {
   return (
     <div className={!lastComment ?  "comment" : "comment comment--borderBottom"}>
-        <img className="comment__avatar" src={avatar} alt='avatar'/>
+        <div className="comment__avatar"></div>
         <div className="comment__details">
             <div className="comment__header">
                 <p className="comment__author">{comment.name}</p>
