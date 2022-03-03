@@ -20,7 +20,7 @@ function Nav() {
               </form>
               <img className="nav__avatar" src={avatar} alt='Avatar'/>
               <Link to='/upload' className="nav__upload">
-                <img className="nav__uploadIcon" src={UploadIcon}/>
+                <img className="nav__uploadIcon" src={UploadIcon} alt="Arrow" />
                 Upload
               </Link>
             </div>
