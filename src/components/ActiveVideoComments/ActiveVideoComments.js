@@ -4,39 +4,46 @@ import Comment from '../Comment/Comment'
 import './ActiveVideoComments.scss'
 import AddCommentIcon from '@mui/icons-material/AddComment';
 
-function ActiveVideoComments({ activeVideoData }) {
+class ActiveVideoComments extends React.Component {
 
-  function handleSubmit(e) {
+  state = {
+    newComment: ""
+  }
+
+  handleSubmit(e) {
     e.preventDefault();
     console.log('submitted', e.target.newComment.value)
   }
 
-  return (
-    <section className="comments">
-      <p className="comments__counter">{`${activeVideoData.comments.length} Comments`}</p>
-      <div className="comments__new">
-        <img className="comments__avatar" src={avatar} alt="avatar"/>
-        <form className="comments__form" onSubmit={handleSubmit}>
-          <div className="comments__input">
-            <label className='comments__label' htmlFor='newComment'>JOIN THE CONVERSATION</label>
-            <textarea className="comments__textarea" id="newComment" name="newComment" rows="5" placeholder="Add a new comment" />
-          </div>
-          <button className="comments__button" type="submit">
-            <AddCommentIcon className="comments__icon" />COMMENT
-          </button>
-        </form>
-      </div>
-      {
-        activeVideoData.comments.map((comment, index) => 
-          <Comment 
-            comment={comment} 
-            key={`${activeVideoData.id}-${index}`} 
-            lastComment={index === activeVideoData.comments.length - 1 ? true : false} 
-          />
-        )
-      }
-    </section>
-  )
+  render() {
+    const { activeVideoData } = this.props;
+    return (
+      <section className="comments">
+        <p className="comments__counter">{`${activeVideoData.comments.length} Comments`}</p>
+        <div className="comments__new">
+          <img className="comments__avatar" src={avatar} alt="avatar"/>
+          <form className="comments__form" onSubmit={this.handleSubmit}>
+            <div className="comments__input">
+              <label className='comments__label' htmlFor='newComment'>JOIN THE CONVERSATION</label>
+              <textarea className="comments__textarea" id="newComment" name="newComment" rows="5" placeholder="Add a new comment" value={this.state.newComment}/>
+            </div>
+            <button className="comments__button" type="submit">
+              <AddCommentIcon className="comments__icon" />COMMENT
+            </button>
+          </form>
+        </div>
+        {
+          activeVideoData.comments.map((comment, index) => 
+            <Comment 
+              comment={comment} 
+              key={`${activeVideoData.id}-${index}`} 
+              lastComment={index === activeVideoData.comments.length - 1 ? true : false} 
+            />
+          )
+        }
+      </section>
+    )
+  }
 }
 
 export default ActiveVideoComments

@@ -21,7 +21,7 @@ function Nav() {
               <img className="nav__avatar" src={avatar} alt='Avatar'/>
               <Link to='/upload' className="nav__upload">
                 <img className="nav__uploadIcon" src={UploadIcon} alt="Arrow" />
-                Upload
+                UPLOAD
               </Link>
             </div>
           
