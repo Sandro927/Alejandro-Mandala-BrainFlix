@@ -1,8 +1,8 @@
 import React from 'react'
 import ReactTimeAgo from 'react-time-ago'
 import './ActiveVideoInfo.scss'
-import VisibilityIcon from '@mui/icons-material/Visibility';
-import FavoriteIcon from '@mui/icons-material/Favorite';
+import Views from '../../assets/images/icons/views.svg';
+import Likes from '../../assets/images/icons/likes.svg';
 
 function ActiveVideoInfo({ activeVideoData }) {
     return (
@@ -18,12 +18,12 @@ function ActiveVideoInfo({ activeVideoData }) {
                 <div className="details__container details__container--marginX">
                     <p className="details__counter">
                         <span className="details__icon">
-                            <VisibilityIcon />
+                            <img src={Views} alt='Eyeball icon' />
                         </span>{activeVideoData.views}
                     </p>
                     <p className="details__counter">
                         <span className="details__icon">
-                            <FavoriteIcon />
+                        <img src={Likes} alt='Heart icon' />
                         </span>{activeVideoData.likes}
                     </p>
                 </div>
