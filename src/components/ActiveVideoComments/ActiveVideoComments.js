@@ -3,18 +3,33 @@ import avatar from '../../assets/images/images/Mohan-muruge.jpg'
 import Comment from '../Comment/Comment'
 import './ActiveVideoComments.scss'
 import AddCommentIcon from '@mui/icons-material/AddComment';
-
+import axios from 'axios'
+const API_KEY = "a10e75f8-75fb-4de7-857f-8aa90025dc69";
 class ActiveVideoComments extends Component {
-
 
   state = {
     newComment: ""
   }
 
-  handleSubmit(e) {
+  handleSubmit = (e) => {
     e.preventDefault();
-
-    console.log('submitted', e.target.newComment.value)
+    const comment = e.target.newComment.value;
+    if (comment) {
+      const URL = `https://project-2-api.herokuapp.com/videos/${this.props.activeVideoData.id}/comments?api_key=${API_KEY}`
+      axios.post(URL, {
+        name: "Brainstation man",
+        comment: comment
+      })
+      .then(response => {
+        console.log("data successfully posted")
+        this.setState({
+          newComment: ""
+        },  this.props.updateVideoComments)
+      })
+      .catch(err => {
+        console.log(err)
+      })
+    }
   }
 
   handleChange = (e) => {
@@ -22,6 +37,8 @@ class ActiveVideoComments extends Component {
       [e.target.name]: e.target.value
     })
   }
+
+  
 
   render() {
     const { activeVideoData } = this.props;

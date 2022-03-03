@@ -43,8 +43,20 @@ export class VideoPlayer extends Component {
     } 
   }
 
+  updateVideoComments = () => {
+    axios.get(`https://project-2-api.herokuapp.com/videos/${this.state.activeVideoData.id}?api_key=${API_KEY}`)
+      .then((response) => {
+        this.setState({
+          activeVideoData: response.data
+        })
+      })
+      .catch((error) => {
+        console.log('not found');
+      })
+  }
+
   componentDidUpdate(prevProps) {
-    if (prevProps.match.params.videoId !== this.props.match.params.videoId) {
+    if (prevProps.match.params.videoId !== this.props.match.params.videoId ) {
       this.fetchActiveVideoData();
       window.scrollTo(0, 0);
     }
@@ -58,7 +70,7 @@ export class VideoPlayer extends Component {
         <VideoHero posterImage={this.state.activeVideoData.image}/> }
          {this.state.activeVideoData &&
         <div className="content">
-          <ActiveVideoDetails activeVideoData={this.state.activeVideoData}/>
+          <ActiveVideoDetails activeVideoData={this.state.activeVideoData} updateVideoComments={this.updateVideoComments}/>
           <NextVideoList videos={this.state.videos} activeVideoData={this.state.activeVideoData}/>
         </div>}
       </>
