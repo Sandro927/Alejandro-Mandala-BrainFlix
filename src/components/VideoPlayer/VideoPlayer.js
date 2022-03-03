@@ -46,6 +46,7 @@ export class VideoPlayer extends Component {
   componentDidUpdate(prevProps) {
     if (prevProps.match.params.videoId !== this.props.match.params.videoId) {
       this.fetchActiveVideoData();
+      window.scrollTo(0, 0);
     }
   }
 
