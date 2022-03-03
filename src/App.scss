@@ -1,10 +1,4 @@
 @use './styles/partials/fonts.scss';
 @use './styles/partials/colours.scss' as c;
 @use './styles/partials/mixins.scss';
-
-body, p, h1, h2, h3, h4, h5, h6, input, textarea, button {
-    font-family: 'Avenir Next';
-    margin: 0;
-    padding: 0;
-    color: c.$brainflix-black;
-}
+@use './styles/partials/global.scss';
