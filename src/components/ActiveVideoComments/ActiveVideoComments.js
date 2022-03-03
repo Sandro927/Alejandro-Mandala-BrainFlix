@@ -1,10 +1,11 @@
-import React from 'react'
+import {Component} from 'react'
 import avatar from '../../assets/images/images/Mohan-muruge.jpg'
 import Comment from '../Comment/Comment'
 import './ActiveVideoComments.scss'
 import AddCommentIcon from '@mui/icons-material/AddComment';
 
-class ActiveVideoComments extends React.Component {
+class ActiveVideoComments extends Component {
+
 
   state = {
     newComment: ""
@@ -12,7 +13,14 @@ class ActiveVideoComments extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+
     console.log('submitted', e.target.newComment.value)
+  }
+
+  handleChange = (e) => {
+    this.setState({
+      [e.target.name]: e.target.value
+    })
   }
 
   render() {
@@ -25,7 +33,7 @@ class ActiveVideoComments extends React.Component {
           <form className="comments__form" onSubmit={this.handleSubmit}>
             <div className="comments__input">
               <label className='comments__label' htmlFor='newComment'>JOIN THE CONVERSATION</label>
-              <textarea className="comments__textarea" id="newComment" name="newComment" rows="5" placeholder="Add a new comment" value={this.state.newComment}/>
+              <textarea className="comments__textarea" id="newComment" name="newComment" rows="5" placeholder="Add a new comment" value={this.state.newComment} onChange={this.handleChange}/>
             </div>
             <button className="comments__button" type="submit">
               <AddCommentIcon className="comments__icon" />COMMENT
