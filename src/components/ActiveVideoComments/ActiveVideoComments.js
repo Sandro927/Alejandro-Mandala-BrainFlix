@@ -24,7 +24,7 @@ class ActiveVideoComments extends Component {
           console.log("data successfully posted")
           this.setState({
             newComment: ""
-          }, this.props.updateVideoComments)
+          }, this.props.fetchActiveVideoData)
         })
         .catch(err => {
           console.log(err)

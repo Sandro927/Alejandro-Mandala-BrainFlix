@@ -26,7 +26,7 @@ export class VideoPlayer extends Component {
   }
 
   fetchActiveVideoData() {
-    let { videoId } = this.props.match.params
+    let { videoId } = this.props.match.params || this.state.activeVideoData.id
     if (!videoId) {
       videoId = '84e96018-4022-434e-80bf-000ce4cd12b8'
     }
@@ -41,18 +41,6 @@ export class VideoPlayer extends Component {
         console.log('not found');
       })
     } 
-  }
-
-  updateVideoComments = () => {
-    axios.get(`https://project-2-api.herokuapp.com/videos/${this.state.activeVideoData.id}?api_key=${API_KEY}`)
-      .then((response) => {
-        this.setState({
-          activeVideoData: response.data
-        })
-      })
-      .catch((error) => {
-        console.log('not found');
-      })
   }
 
   componentDidUpdate(prevProps) {
@@ -70,7 +58,7 @@ export class VideoPlayer extends Component {
         <VideoHero posterImage={this.state.activeVideoData.image}/> }
          {this.state.activeVideoData &&
         <div className="content">
-          <ActiveVideoDetails activeVideoData={this.state.activeVideoData} updateVideoComments={this.updateVideoComments}/>
+          <ActiveVideoDetails activeVideoData={this.state.activeVideoData} fetchActiveVideoData={this.fetchActiveVideoData}/>
           <NextVideoList videos={this.state.videos} activeVideoData={this.state.activeVideoData}/>
         </div>}
       </>
