@@ -21,10 +21,11 @@ class ActiveVideoComments extends Component {
         comment: comment
       })
         .then(response => {
-          console.log("data successfully posted")
           this.setState({
             newComment: ""
-          }, this.props.fetchActiveVideoData)
+          }, () => {
+            this.props.fetchVideoData(this.props.activeVideoData.id)
+          });
         })
         .catch(err => {
           console.log(err)
@@ -62,7 +63,7 @@ class ActiveVideoComments extends Component {
               key={comment.id}
               lastComment={index === activeVideoData.comments.length - 1 ? true : false}
               activeVideoData={this.props.activeVideoData}
-              updateVideoComments={this.props.updateVideoComments}
+              fetchVideoData={this.props.fetchVideoData}
             />
           )
         }

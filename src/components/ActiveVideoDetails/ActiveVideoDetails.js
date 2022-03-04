@@ -7,7 +7,7 @@ function ActiveVideoDetails(props) {
   return (
    <section className="videoSection">
         <ActiveVideoInfo activeVideoData={props.activeVideoData}/>
-        <ActiveVideoComments activeVideoData={props.activeVideoData} fetchActiveVideoData={props.fetchActiveVideoData}/>
+        <ActiveVideoComments activeVideoData={props.activeVideoData} fetchVideoData={props.fetchVideoData}/>
    </section>
   )
 }
