@@ -1,0 +1,11 @@
+@use "../../styles/partials/mixins.scss" as *;
+@use "../../styles/partials/colours.scss" as c;
+
+.upload {
+
+    &__content {
+        padding: 1.5rem 1rem 1rem;
+        border-top: 1px solid c.$brainflix-mercury;
+    }
+
+}
