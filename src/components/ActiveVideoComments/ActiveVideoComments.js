@@ -23,12 +23,9 @@ class ActiveVideoComments extends Component {
         .then(response => {
           this.setState({
             newComment: ""
-          }, () => {
-            this.props.fetchVideoData(this.props.activeVideoData.id)
-          });
+          }, () => this.props.fetchVideoData(this.props.activeVideoData.id));
         })
         .catch(err => {
-          console.log(err)
         })
     }
   }

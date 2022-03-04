@@ -3,11 +3,11 @@ import './ActiveVideoDetails.scss'
 import ActiveVideoInfo from '../ActiveVideoInfo/ActiveVideoInfo'
 import ActiveVideoComments from '../ActiveVideoComments/ActiveVideoComments'
 
-function ActiveVideoDetails(props) {
+function ActiveVideoDetails({activeVideoData, fetchVideoData}) {
   return (
    <section className="videoSection">
-        <ActiveVideoInfo activeVideoData={props.activeVideoData}/>
-        <ActiveVideoComments activeVideoData={props.activeVideoData} fetchVideoData={props.fetchVideoData}/>
+        <ActiveVideoInfo activeVideoData={activeVideoData}/>
+        <ActiveVideoComments activeVideoData={activeVideoData} fetchVideoData={fetchVideoData}/>
    </section>
   )
 }

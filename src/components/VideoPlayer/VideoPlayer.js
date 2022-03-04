@@ -4,7 +4,6 @@ import ActiveVideoDetails from '../ActiveVideoDetails/ActiveVideoDetails'
 import NextVideoList from '../NextVideoList/NextVideoList'
 import './VideoPlayer.scss'
 import axios from 'axios';
-
 const API_KEY = "a10e75f8-75fb-4de7-857f-8aa90025dc69";
 export class VideoPlayer extends Component {
 
@@ -53,7 +52,6 @@ export class VideoPlayer extends Component {
       window.scrollTo(0, 0);
     }
   }
-
 
   render() {
     return (

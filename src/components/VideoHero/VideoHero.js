@@ -1,11 +1,11 @@
 import React from 'react'
 import './VideoHero.scss'
 
-function VideoHero(props) {
+function VideoHero({posterImage}) {
   return (
     <section className="hero">
         <div className="hero__content">
-            <video className="hero__video" controls poster={props.posterImage}>
+            <video className="hero__video" controls poster={posterImage}>
                 <source src={""} type="video/mp4" />
             </video>
         </div>
