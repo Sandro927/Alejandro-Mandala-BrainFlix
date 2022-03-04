@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactTimeAgo from 'react-time-ago'
+import DeleteIcon from '@mui/icons-material/Delete'
 import './Comment.scss'
 
 function Comment({comment, lastComment}) {
@@ -13,6 +14,7 @@ function Comment({comment, lastComment}) {
                   <ReactTimeAgo date={comment.timestamp} locale="en-US"/>
                 </p>
             </div>
+            <DeleteIcon />
             <p className="comment__body">{comment.comment}</p>
         </div>
     </div>
