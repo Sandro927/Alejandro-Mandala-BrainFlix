@@ -5,15 +5,15 @@ import './Comment.scss'
 import axios from 'axios'
 const API_KEY = "a10e75f8-75fb-4de7-857f-8aa90025dc69";
 
-function Comment({comment, lastComment, activeVideoData}) {
+function Comment({comment, lastComment, activeVideoData, updateVideoComments}) {
 
   const handleDelete = (e) => {
     axios.delete(`https://project-2-api.herokuapp.com/videos/${activeVideoData.id}/comments/${comment.id}?api_key=${API_KEY}`)
     .then(response => {
-
+      updateVideoComments()
     })
     .catch(error => {
-
+      console.log(error)
     })
   }
 

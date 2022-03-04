@@ -62,6 +62,7 @@ class ActiveVideoComments extends Component {
               key={comment.id}
               lastComment={index === activeVideoData.comments.length - 1 ? true : false}
               activeVideoData={this.props.activeVideoData}
+              updateVideoComments={this.props.updateVideoComments}
             />
           )
         }
