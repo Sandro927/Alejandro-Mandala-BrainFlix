@@ -8,7 +8,7 @@ function NextVideo(props) {
         <div className="video__thumbnail">
           <Link to={`/${props.video.id}`}>
             <img className="video__image" src={props.video.image} alt='Video Thumbnail'/>
-            </Link>
+          </Link>
         </div>
         <div className="video__details">
             <p className="video__title">{props.video.title}</p>

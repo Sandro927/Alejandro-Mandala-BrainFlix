@@ -27,8 +27,8 @@ function Comment({comment, lastComment, activeVideoData, fetchVideoData}) {
                   <ReactTimeAgo date={comment.timestamp} locale="en-US"/>
                 </p>
             </div>
-            <DeleteIcon onClick={handleDelete}/>
             <p className="comment__body">{comment.comment}</p>
+            <DeleteIcon onClick={handleDelete}/>
         </div>
     </div>
   )
