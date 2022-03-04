@@ -1,4 +1,5 @@
 import React from 'react'
+import UploadForm from '../UploadForm/UploadForm'
 import './Upload.scss'
 
 function Upload() {
@@ -8,10 +9,7 @@ function Upload() {
         <h1>Upload Video</h1>
         <div className="upload__body">
           <figure>IMAGE GOES HERE</figure>
-          <form>
-            <input type="text" placeholder="Add a title to your video"/>
-            <input type="text" placeholder="Add a description to your video"/>
-          </form>
+          <UploadForm />
         </div>
       </div>
     </section>
