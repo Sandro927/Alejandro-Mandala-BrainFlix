@@ -14,11 +14,10 @@ function App() {
         <Switch>
           <Route path="/" exact component={VideoPlayer}/>
           <Route path="/upload" component={Upload} />
-          <Route path="/:videoId" render={(routerProps) => <VideoPlayer {...routerProps}/>} />
+          <Route path="/videos/:id" render={(routerProps) => <VideoPlayer {...routerProps}/>} />
           <Route component={PageNotFound} />
         </Switch>
       </Router>
-      
     </>
   );
 }

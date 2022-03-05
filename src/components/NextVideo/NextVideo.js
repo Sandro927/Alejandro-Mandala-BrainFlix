@@ -6,7 +6,7 @@ function NextVideo({ video }) {
   return (
     <div className="video">
         <div className="video__thumbnail">
-          <Link to={`/${video.id}`}>
+          <Link to={`/videos/${video.id}`}>
             <img className="video__image" src={video.image} alt='Video Thumbnail'/>
           </Link>
         </div>

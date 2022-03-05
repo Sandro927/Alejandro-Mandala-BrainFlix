@@ -25,15 +25,15 @@ export class VideoPlayer extends Component {
   }
 
   initializeActiveVideo() {
-    let { videoId } = this.props.match.params
-    if (!videoId) {
-      videoId = '84e96018-4022-434e-80bf-000ce4cd12b8'
+    let { id } = this.props.match.params
+    if (!id) {
+      id = '84e96018-4022-434e-80bf-000ce4cd12b8'
     }
-    if(this.state.videos.find(video => video.id === videoId)) {
-      this.fetchVideoData(videoId)
+    if(this.state.videos.find(video => video.id === id)) {
+      this.fetchVideoData(id)
     } 
   }
-
+  
   fetchVideoData = (id) => {
     axios.get(`https://project-2-api.herokuapp.com/videos/${id}?api_key=${API_KEY}`)
       .then((response) => {
@@ -47,7 +47,7 @@ export class VideoPlayer extends Component {
   }
 
   componentDidUpdate(prevProps) {
-    if (prevProps.match.params.videoId !== this.props.match.params.videoId ) {
+    if (prevProps.match.params.id !== this.props.match.params.id ) {
       this.initializeActiveVideo();
       window.scrollTo(0, 0);
     }
