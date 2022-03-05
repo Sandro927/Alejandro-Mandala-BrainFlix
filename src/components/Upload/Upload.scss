@@ -13,7 +13,7 @@
     }
 
     &__figure {
-        margin: 1.5rem 0 1rem;
+        margin: 1.5rem 0 0;
 
         @include tablet {
             width: 50%;
@@ -23,6 +23,7 @@
     &__caption {
         font-size: .8125rem;
         color: c.$brainflix-silver;
+        padding-bottom: 0.5rem;
     }
 
     &__image {

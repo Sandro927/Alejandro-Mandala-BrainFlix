@@ -7,14 +7,31 @@
 
     &__label {
         color: c.$brainflix-silver;
+        font-size: 0.8125rem;
+        padding: 1rem 0 0.5rem;
     }
 
     &__text {
         border-radius: 4px;
+        border: 1px solid c.$brainflix-mercury;
+        padding: 0.5rem;
+        background-color: c.$brainflix-alabaster;
+
+        &::placeholder {
+            color: c.$brainflix-black;
+            
+        }
     }
 
     &__textarea {
         border-radius: 4px;
+        border: 1px solid c.$brainflix-mercury;
+        padding: 0.5rem;
+        background-color: c.$brainflix-alabaster;
+
+        &::placeholder {
+            color: c.$brainflix-black;
+        }
     }
 
 }
