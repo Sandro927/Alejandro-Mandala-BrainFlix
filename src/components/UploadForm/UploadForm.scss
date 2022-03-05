@@ -34,4 +34,8 @@
         }
     }
 
+    &__submit {
+        @include brainflix-button;
+        margin-top: 1rem;
+    }
 }

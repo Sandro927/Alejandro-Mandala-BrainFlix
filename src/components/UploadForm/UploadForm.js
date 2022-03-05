@@ -10,6 +10,8 @@ export class UploadForm extends Component {
           
           <label className="form__label" for="videoDescription">ADD A VIDEO DESCRIPTION</label>
           <textarea className="form__textarea" name="videoDescription" rows="4" placeholder="Add a description to your video"/>
+
+          <input className="form__submit" type='Submit' value="Publish" />
       </form>
     )
   }
