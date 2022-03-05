@@ -8,4 +8,20 @@
         border-top: 1px solid c.$brainflix-mercury;
     }
 
+    &__title {
+        font-size: 1.5rem;
+    }
+
+    &__figure {
+        margin: 1.5rem 0 1rem;
+    }
+
+    &__caption {
+
+    }
+
+    &__image {
+        width: 100%;
+        border-radius: 4px;
+    }
 }
