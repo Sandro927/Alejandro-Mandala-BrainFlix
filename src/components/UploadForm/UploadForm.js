@@ -15,7 +15,7 @@ export class UploadForm extends Component {
   }
 
   handleSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault(); 
     alert("Video has been uploaded!");
     setTimeout(() => this.props.routerProps.history.push('/'), 3000)
 
