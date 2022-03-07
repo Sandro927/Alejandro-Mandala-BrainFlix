@@ -45,20 +45,6 @@ export class VideoPlayer extends Component {
         })
       })
       .catch((error) => {
-        alert('error connecting to the database');
-        this.props.history.push("./")
-      })
-  }
-
-  fetchActiveVideoData = (id) => {
-    axios.get(`https://project-2-api.herokuapp.com/videos/${id}?api_key=${API_KEY}`)
-      .then((response) => {
-        response.data.comments.sort((a, b) => b.timestamp - a.timestamp)
-        this.setState({
-          activeVideoData: response.data
-        })
-      })
-      .catch((error) => {
       })
   }
 

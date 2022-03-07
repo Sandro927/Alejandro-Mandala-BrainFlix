@@ -2,8 +2,31 @@
 @use "../../styles/partials/colours.scss" as c;
 
 .form {
-    display: flex;
-    flex-direction: column;
+    @include flex-column;
+
+    &__inputs {
+        @include flex-column;
+
+        @include desktop {
+            padding-left: 1.5rem;
+            flex-grow: 1;
+        }
+    }
+
+    &__body {
+        @include flex-column;
+        @include tablet {
+            border-top: 1px solid c.$brainflix-mercury;
+            border-bottom: 1px solid c.$brainflix-mercury;    
+            padding-bottom: 2rem;
+            
+        }
+
+        @include desktop {
+            flex-direction: row;
+        }
+       
+    }
 
     &__label {
         color: c.$brainflix-silver;
@@ -11,7 +34,48 @@
         padding: 1rem 0 0.5rem;
 
         @include tablet {
-            font-size: .875rem
+            font-size: 0.875rem;
+        }
+
+        @include desktop {
+            padding-top: 1.5rem
+        }
+    }
+
+    &__figure {
+        margin: 1.5rem 0 0;
+
+        @include tablet {
+            width: 50%;
+        }
+
+        @include desktop {
+            width: 40%;
+        }
+    }
+
+    &__caption {
+        font-size: 0.8125rem;
+        color: c.$brainflix-silver;
+        padding-bottom: 0.5rem;
+
+        @include tablet {
+            font-size: 0.875rem;
+        }
+    }
+
+    &__image {
+        width: 100%;
+        border-radius: 4px;
+    }
+
+    &__buttons {
+        @include flex-column;
+
+        @include tablet {
+            flex-direction: row-reverse;
+            align-items: center;
+            margin-top: 2rem;
         }
     }
 
@@ -20,14 +84,13 @@
         border: 1px solid c.$brainflix-mercury;
         padding: 0.5rem 1rem;
         background-color: c.$brainflix-alabaster;
-        
+
         @include tablet {
-            font-size: .875rem
+            font-size: 0.875rem;
         }
 
         &::placeholder {
             color: c.$brainflix-black;
-            
         }
     }
 
@@ -39,7 +102,7 @@
         resize: none;
 
         @include tablet {
-            font-size: .875rem
+            font-size: 0.875rem;
         }
 
         &::placeholder {
@@ -50,5 +113,24 @@
     &__submit {
         @include brainflix-button;
         margin-top: 1rem;
+        font-size: .75rem;
+
+        @include tablet {
+            margin-top: 0;
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        color: c.$brainflix-blue;
+        font-size: .75rem;
+        font-weight: bold;
+        text-align: center;
+        padding-top: 3rem;
+
+        @include tablet {
+            padding-top: 0;
+            padding-right: 5rem;
+        }
     }
 }

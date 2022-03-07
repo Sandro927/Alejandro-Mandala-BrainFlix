@@ -1,0 +1,26 @@
+@use "../../styles/partials/mixins.scss" as *;
+@use "../../styles/partials/colours.scss" as c;
+
+.upload {
+    &__content {
+        padding: 1.5rem 1rem 1rem;
+        border-top: 1px solid c.$brainflix-mercury;
+
+        @include tablet {
+            padding: 1.5rem 2rem 1rem;
+        }
+
+        @include desktop {
+            @include desktop-center;
+        }
+    }
+
+    &__title {
+        font-size: 1.5rem;
+
+        @include tablet {
+            font-size: 2.0625rem;
+            padding: 1.5rem 0 2rem;
+        }
+    }
+}
