@@ -6,10 +6,19 @@
     &__content {
         padding: 1.5rem 1rem 1rem;
         border-top: 1px solid c.$brainflix-mercury;
+
+        @include desktop {
+            @include desktop-center;
+        }
+
     }
 
     &__title {
         font-size: 1.5rem;
+
+        @include tablet {
+            font-size: 33px;
+        }
     }
 
     &__figure {
@@ -24,6 +33,12 @@
         font-size: .8125rem;
         color: c.$brainflix-silver;
         padding-bottom: 0.5rem;
+
+        @include tablet {
+            font-size: .875rem;
+        }
+
+
     }
 
     &__image {
