@@ -13,7 +13,7 @@ function App() {
       <Nav />
         <Switch>
           <Route exact path="/" component={VideoPlayer}/>
-          <Route path="/upload" component={Upload} />
+          <Route path="/upload" render={(routerProps) => <Upload {...routerProps}/>} />
           <Route path="/videos/:id" render={(routerProps) => <VideoPlayer {...routerProps}/>} />
           <Route component={PageNotFound} />
         </Switch>

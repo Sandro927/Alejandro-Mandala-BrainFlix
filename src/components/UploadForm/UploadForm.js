@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import './UploadForm.scss'
-import thumbnail from '../../assets/images//images/Upload-video-preview.jpg' 
+import thumbnail from '../../assets/images//images/Upload-video-preview.jpg'
 export class UploadForm extends Component {
   state = {
     videoTitle: "",
@@ -13,10 +13,17 @@ export class UploadForm extends Component {
       [e.target.name]: e.target.value
     })
   }
-  
+
+  handleSubmit = (e) => {
+    e.preventDefault();
+    alert("Video has been uploaded!");
+    setTimeout(() => this.props.routerProps.history.push('/'), 3000)
+
+  }
+
   render() {
     return (
-      <form className="form" >
+      <form className="form" onSubmit={this.handleSubmit}>
 
         <div className="form__body">
           <figure className="form__figure">
@@ -25,22 +32,22 @@ export class UploadForm extends Component {
           </figure>
           <div className="form__inputs">
             <label className="form__label" htmlFor="videoTitle">TITLE OF YOUR VIDEO</label>
-            <input 
-              className="form__text" 
-              type="text" 
-              name="videoTitle" 
-              placeholder="Add a title to your video" 
-              onChange={this.handleChange} 
+            <input
+              className="form__text"
+              type="text"
+              name="videoTitle"
+              placeholder="Add a title to your video"
+              onChange={this.handleChange}
               value={this.state.videoTitle}
             />
-              
+
             <label className="form__label" htmlFor="videoDescription">ADD A VIDEO DESCRIPTION</label>
-            <textarea 
-              className="form__textarea" 
-              name="videoDescription" 
-              rows="4" 
-              placeholder="Add a description to your video" 
-              onChange={this.handleChange} 
+            <textarea
+              className="form__textarea"
+              name="videoDescription"
+              rows="4"
+              placeholder="Add a description to your video"
+              onChange={this.handleChange}
               value={this.state.videoDescription}
             />
           </div>
