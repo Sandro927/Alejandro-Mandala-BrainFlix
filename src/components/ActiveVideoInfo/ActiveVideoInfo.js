@@ -21,7 +21,7 @@ function ActiveVideoInfo({ activeVideoData }) {
                             <img src={Views} alt='Eyeball icon' />
                         </span>{activeVideoData.views}
                     </p>
-                    <p className="details__counter">
+                    <p className="details__counter details__counter--space-top">
                         <span className="details__icon">
                         <img src={Likes} alt='Heart icon' />
                         </span>{activeVideoData.likes}

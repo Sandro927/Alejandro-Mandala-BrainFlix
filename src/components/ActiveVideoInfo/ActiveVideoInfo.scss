@@ -66,7 +66,6 @@
     &__stats {
         font-size: .8125rem;
         display: flex;
-        align-items: center;
         border-bottom: 1px solid c.$brainflix-mercury;
         border-top: 1px solid c.$brainflix-mercury;
 
@@ -84,6 +83,10 @@
             padding: 0 0 0 36px;
             font-size: .875rem;
         }
+    }
+
+    &__counter--space-top {
+        padding-top: .75rem;
     }
 
     &__icon {

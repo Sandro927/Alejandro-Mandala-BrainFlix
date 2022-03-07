@@ -11,7 +11,7 @@ function Upload() {
         <div className="upload__body">
           <figure className="upload__figure">
             <figcaption className="upload__caption">VIDEO THUMBNAIL</figcaption>
-            <img className="upload__image" src={thumbnail}></img>
+            <img className="upload__image" src={thumbnail} alt="Generic Biking POV"></img>
           </figure>
           <UploadForm />
         </div>
