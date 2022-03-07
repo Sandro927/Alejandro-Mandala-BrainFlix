@@ -28,7 +28,7 @@ function Comment({comment, lastComment, activeVideoData, fetchVideoData}) {
                 </p>
             </div>
             <p className="comment__body">{comment.comment}</p>
-            <DeleteIcon onClick={handleDelete}/>
+            <DeleteIcon className="comment__icon" onClick={handleDelete}/>
         </div>
     </div>
   )
