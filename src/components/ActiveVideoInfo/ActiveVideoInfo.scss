@@ -87,6 +87,10 @@
 
     &__counter--space-top {
         padding-top: .75rem;
+
+        @include tablet {
+            padding-top: 0;
+        }
     }
 
     &__icon {
