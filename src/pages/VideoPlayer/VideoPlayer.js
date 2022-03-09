@@ -4,7 +4,6 @@ import ActiveVideoDetails from '../../components/ActiveVideoDetails/ActiveVideoD
 import NextVideoList from '../../components/NextVideoList/NextVideoList'
 import './VideoPlayer.scss'
 import axios from 'axios';
-const API_KEY = "a10e75f8-75fb-4de7-857f-8aa90025dc69";
 
 export class VideoPlayer extends Component {
 
@@ -14,7 +13,7 @@ export class VideoPlayer extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:8080/videos')
+    axios.get('/videos')
       .then((response) => {
         this.setState({ videos: response.data }, this.initializeActiveVideo)
       })
@@ -37,7 +36,7 @@ export class VideoPlayer extends Component {
   }
 
   fetchActiveVideoData = (id) => {
-    axios.get(`http://localhost:8080/videos/${id}`)
+    axios.get(`/videos/${id}`)
       .then((response) => {
         response.data.comments.sort((a, b) => b.timestamp - a.timestamp)
         this.setState({
