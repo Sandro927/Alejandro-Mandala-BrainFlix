@@ -14,7 +14,7 @@ export class VideoPlayer extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:8080')
+    axios.get('http://localhost:8080/videos')
       .then((response) => {
         this.setState({ videos: response.data }, this.initializeActiveVideo)
       })
