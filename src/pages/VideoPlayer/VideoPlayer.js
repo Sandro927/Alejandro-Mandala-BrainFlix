@@ -14,7 +14,7 @@ export class VideoPlayer extends Component {
   }
 
   componentDidMount() {
-    axios.get(`https://project-2-api.herokuapp.com/videos?api_key=${API_KEY}`)
+    axios.get('http://localhost:8080')
       .then((response) => {
         this.setState({ videos: response.data }, this.initializeActiveVideo)
       })
