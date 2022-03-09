@@ -37,7 +37,7 @@ export class VideoPlayer extends Component {
   }
 
   fetchActiveVideoData = (id) => {
-    axios.get(`https://project-2-api.herokuapp.com/videos/${id}?api_key=${API_KEY}`)
+    axios.get(`http://localhost:8080/videos/${id}`)
       .then((response) => {
         response.data.comments.sort((a, b) => b.timestamp - a.timestamp)
         this.setState({
