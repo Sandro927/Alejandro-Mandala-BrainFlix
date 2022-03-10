@@ -4,7 +4,6 @@ import Comment from '../Comment/Comment'
 import './ActiveVideoComments.scss'
 import AddCommentIcon from '@mui/icons-material/AddComment';
 import axios from 'axios'
-const API_KEY = "a10e75f8-75fb-4de7-857f-8aa90025dc69";
 class ActiveVideoComments extends Component {
 
   state = {
@@ -15,7 +14,7 @@ class ActiveVideoComments extends Component {
     e.preventDefault();
     const comment = e.target.newComment.value;
     if (comment) {
-      const URL = `https://project-2-api.herokuapp.com/videos/${this.props.activeVideoData.id}/comments?api_key=${API_KEY}`
+      const URL = `/videos/${this.props.activeVideoData.id}/comments`;
       axios.post(URL, {
         name: "Brainstation man",
         comment: comment
@@ -26,7 +25,7 @@ class ActiveVideoComments extends Component {
           }, () => this.props.fetchVideoData(this.props.activeVideoData.id));
         })
         .catch(err => {
-        })
+        });
     }
   }
 

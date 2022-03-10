@@ -3,17 +3,16 @@ import ReactTimeAgo from 'react-time-ago'
 import DeleteIcon from '@mui/icons-material/Delete'
 import './Comment.scss'
 import axios from 'axios'
-const API_KEY = "a10e75f8-75fb-4de7-857f-8aa90025dc69";
 
 function Comment({comment, lastComment, activeVideoData, fetchVideoData}) {
 
   const handleDelete = (e) => {
-    axios.delete(`https://project-2-api.herokuapp.com/videos/${activeVideoData.id}/comments/${comment.id}?api_key=${API_KEY}`)
+    axios.delete(`http://localhost:8080/videos/${activeVideoData.id}/comments/${comment.id}`)
     .then(response => {
-      fetchVideoData(activeVideoData.id)
+      fetchVideoData(activeVideoData.id);
     })
     .catch(error => {
-      console.log(error)
+      console.log(error);
     })
   }
 

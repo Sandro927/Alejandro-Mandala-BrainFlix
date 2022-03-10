@@ -8,7 +8,6 @@ function Upload(props) {
       <div className="upload__content">
         <h1 className="upload__title">Upload Video</h1>
         <div className="upload__body">
-          
           <UploadForm routerProps={props}/>
         </div>
       </div>

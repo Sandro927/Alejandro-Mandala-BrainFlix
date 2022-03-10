@@ -31,7 +31,6 @@ function ActiveVideoInfo({ activeVideoData }) {
             <div className="details__body">
                 <p className="details__text">{activeVideoData.description}</p>
             </div>
-
         </div>
     )
 }

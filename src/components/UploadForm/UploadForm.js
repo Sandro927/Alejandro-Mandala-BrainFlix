@@ -30,15 +30,13 @@ export class UploadForm extends Component {
     })
     .catch((error) => {
       console.log(error)
-    })
-    setTimeout(() => this.props.routerProps.history.push('/'), 3000)
-
+    });
+    setTimeout(() => this.props.routerProps.history.push('/'), 3000);
   }
 
   render() {
     return (
       <form className="form" onSubmit={this.handleSubmit}>
-
         <div className="form__body">
           <figure className="form__figure">
             <figcaption className="form__caption">VIDEO THUMBNAIL</figcaption>

@@ -13,45 +13,46 @@ export class VideoPlayer extends Component {
   }
 
   componentDidMount() {
-    axios.get('/videos')
+    axios.get('http://localhost:8080/videos')
       .then((response) => {
         this.setState({ videos: response.data }, this.initializeActiveVideo)
       })
       .catch((error) => {
         alert('error connecting to the database');
         this.props.history.push("./")
-      })
+      });
   }
 
   initializeActiveVideo = () => {
-    let { id } = this.props.match.params
+    let { id } = this.props.match.params;
     if (!id) {
-      id = '84e96018-4022-434e-80bf-000ce4cd12b8'
+      id = '84e96018-4022-434e-80bf-000ce4cd12b8';
     }
     if (this.state.videos.find(video => video.id === id)) {
-      this.fetchActiveVideoData(id)
+      this.fetchActiveVideoData(id);
     } else {
-      this.props.history.push("./")
+      this.props.history.push("./");
     }
   }
 
   fetchActiveVideoData = (id) => {
-    axios.get(`/videos/${id}`)
+    axios.get(`http://localhost:8080/videos/${id}`)
       .then((response) => {
-        response.data.comments.sort((a, b) => b.timestamp - a.timestamp)
+        response.data.comments.sort((a, b) => b.timestamp - a.timestamp);
         this.setState({
           activeVideoData: response.data
         })
       })
       .catch((error) => {
-      })
+      });
   }
 
   componentDidUpdate(prevProps) {
-    const currId = this.props.match.params.id
+    const currId = this.props.match.params.id;
     const prevId = prevProps.match.params.id;
     if (prevId !== currId) {
       this.initializeActiveVideo();
+      console.log(this.state.activeVideoData);
       window.scrollTo(0, 0);
     }
   }
