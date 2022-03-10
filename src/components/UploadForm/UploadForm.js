@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import './UploadForm.scss'
 import thumbnail from '../../assets/images//images/Upload-video-preview.jpg'
+import axios from 'axios';
 export class UploadForm extends Component {
   state = {
     videoTitle: "",
@@ -16,7 +17,20 @@ export class UploadForm extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault(); 
-    alert("Video has been uploaded!");
+    axios.post("/videos", {
+      title: this.state.videoTitle,
+      description: this.state.videoDescription
+    })
+    .then((response) => {
+      console.log(response.data);
+      this.setState({
+        videoTitle: "",
+        videoDescription: ""
+      })
+    })
+    .catch((error) => {
+      console.log(error)
+    })
     setTimeout(() => this.props.routerProps.history.push('/'), 3000)
 
   }
