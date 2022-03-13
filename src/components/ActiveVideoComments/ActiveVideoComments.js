@@ -14,7 +14,7 @@ class ActiveVideoComments extends Component {
     e.preventDefault();
     const comment = e.target.newComment.value;
     if (comment) {
-      const URL = `/videos/${this.props.activeVideoData.id}/comments`;
+      const URL = `http://localhost:8080/videos/${this.props.activeVideoData.id}/comments`;
       axios.post(URL, {
         name: "Brainstation man",
         comment: comment

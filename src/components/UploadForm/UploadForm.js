@@ -1,23 +1,41 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import './UploadForm.scss'
-import thumbnail from '../../assets/images//images/Upload-video-preview.jpg'
+import thumbnail from '../../assets/images/images/Upload-video-preview.jpg'
+import uploadIcon from '../../assets/images/icons/publish.svg'
 import axios from 'axios';
 export class UploadForm extends Component {
   state = {
     videoTitle: "",
-    videoDescription: ""
+    videoDescription: "",
+    formEmpty: true
   }
 
   handleChange = (e) => {
     this.setState({
       [e.target.name]: e.target.value
     })
+    if(this.state.videoTitle === "" || this.state.videoDescription === "") {
+      this.setState({
+        formEmpty: false
+      })
+    }
+    
   }
 
   handleSubmit = (e) => {
     e.preventDefault(); 
-    axios.post("/videos", {
+    if (this.state.videoTitle === "" || this.state.videoDescription === "") {
+      //turn on error state on input
+      this.setState({
+        formEmpty: true
+      })
+      return;
+    }
+    this.setState({
+      formEmpty: false
+    })
+    axios.post("http://localhost:8080/videos", {
       title: this.state.videoTitle,
       description: this.state.videoDescription
     })
@@ -31,6 +49,7 @@ export class UploadForm extends Component {
     .catch((error) => {
       console.log(error)
     });
+    
     setTimeout(() => this.props.routerProps.history.push('/'), 3000);
   }
 
@@ -65,7 +84,7 @@ export class UploadForm extends Component {
           </div>
         </div>
         <div className="form__buttons">
-          <input className="form__submit" type='Submit' defaultValue="Publish" />
+          <input className="form__submit" type='Submit' defaultValue="Publish"></input>
           <Link className="form__link" to='/'>CANCEL</Link>
         </div>
       </form>
