@@ -6,35 +6,26 @@ import uploadIcon from '../../assets/images/icons/publish.svg'
 import axios from 'axios';
 export class UploadForm extends Component {
   state = {
-    videoTitle: "",
-    videoDescription: "",
-    formEmpty: true
+    videoTitle: null,
+    videoDescription: null,
+    submit: false
   }
 
   handleChange = (e) => {
     this.setState({
       [e.target.name]: e.target.value
     })
-    if(this.state.videoTitle === "" || this.state.videoDescription === "") {
-      this.setState({
-        formEmpty: false
-      })
-    }
-    
   }
 
   handleSubmit = (e) => {
     e.preventDefault(); 
-    if (this.state.videoTitle === "" || this.state.videoDescription === "") {
-      //turn on error state on input
-      this.setState({
-        formEmpty: true
-      })
+    this.setState({
+      submit: true
+    })
+    if (!this.state.videoDescription || !this.state.videoTitle) {
       return;
     }
-    this.setState({
-      formEmpty: false
-    })
+    
     axios.post("http://localhost:8080/videos", {
       title: this.state.videoTitle,
       description: this.state.videoDescription
@@ -43,7 +34,8 @@ export class UploadForm extends Component {
       console.log(response.data);
       this.setState({
         videoTitle: "",
-        videoDescription: ""
+        videoDescription: "",
+        submit: false
       })
     })
     .catch((error) => {
@@ -64,22 +56,24 @@ export class UploadForm extends Component {
           <div className="form__inputs">
             <label className="form__label" htmlFor="videoTitle">TITLE OF YOUR VIDEO</label>
             <input
-              className="form__text"
+              className={(this.state.submit && !this.state.videoTitle) ? "form__text form__text--error" : "form__text"}
               type="text"
               name="videoTitle"
               placeholder="Add a title to your video"
               onChange={this.handleChange}
               value={this.state.videoTitle}
+              tabIndex="0"
             />
 
             <label className="form__label" htmlFor="videoDescription">ADD A VIDEO DESCRIPTION</label>
             <textarea
-              className="form__textarea"
+              className={(this.state.submit && !this.state.videoDescription) ?  "form__textarea form__textarea--error" : "form__textarea"}
               name="videoDescription"
               rows="4"
               placeholder="Add a description to your video"
               onChange={this.handleChange}
               value={this.state.videoDescription}
+              tabIndex="1"
             />
           </div>
         </div>

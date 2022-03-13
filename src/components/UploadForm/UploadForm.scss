@@ -133,4 +133,13 @@
             padding-right: 5rem;
         }
     }
+
+    &__text--error:active, &__textarea--error:active {
+        border: 2px solid c.$brainflix-blue;
+    }
+
+
+    &__text--error, &__textarea--error {
+        border: 2px solid #D22D2D;
+    }
 }
