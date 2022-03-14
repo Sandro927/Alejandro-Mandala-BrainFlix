@@ -64,7 +64,7 @@ export class VideoPlayer extends Component {
           <VideoHero posterImage={this.state.activeVideoData.image} />}
         {this.state.activeVideoData &&
           <div className="content">
-            <ActiveVideoDetails activeVideoData={this.state.activeVideoData} fetchVideoData={this.fetchActiveVideoData} />
+            <ActiveVideoDetails activeVideoData={this.state.activeVideoData} fetchVideoData={this.fetchActiveVideoData}/>
             <NextVideoList videos={this.state.videos} activeVideoData={this.state.activeVideoData} />
           </div>}
       </>

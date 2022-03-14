@@ -6,7 +6,7 @@ import ActiveVideoComments from '../ActiveVideoComments/ActiveVideoComments'
 function ActiveVideoDetails({activeVideoData, fetchVideoData}) {
   return (
    <section className="videoSection">
-        <ActiveVideoInfo activeVideoData={activeVideoData}/>
+        <ActiveVideoInfo activeVideoData={activeVideoData} fetchVideoData={fetchVideoData}/>
         <ActiveVideoComments activeVideoData={activeVideoData} fetchVideoData={fetchVideoData}/>
    </section>
   )

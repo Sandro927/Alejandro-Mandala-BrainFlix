@@ -43,28 +43,28 @@
     }
 
     &__author {
-        font-size: .8125rem;
+        font-size: 0.8125rem;
         line-height: 1.125rem;
         font-weight: 600;
 
         @include tablet {
-            font-size: .875rem;
+            font-size: 0.875rem;
         }
     }
 
     &__timestamp {
-        font-size: .8125rem;
+        font-size: 0.8125rem;
         padding-top: 1rem;
         color: c.$brainflix-silver;
 
         @include tablet {
             padding: 0 36px 0;
-            font-size: .875rem;
+            font-size: 0.875rem;
         }
     }
 
     &__stats {
-        font-size: .8125rem;
+        font-size: 0.8125rem;
         display: flex;
         border-bottom: 1px solid c.$brainflix-mercury;
         border-top: 1px solid c.$brainflix-mercury;
@@ -81,12 +81,12 @@
         color: c.$brainflix-silver;
         @include tablet {
             padding: 0 0 0 36px;
-            font-size: .875rem;
+            font-size: 0.875rem;
         }
     }
 
     &__counter--space-top {
-        padding-top: .75rem;
+        padding-top: 0.75rem;
 
         @include tablet {
             padding-top: 0;
@@ -99,18 +99,25 @@
 
     &__body {
         padding-top: 1rem;
+        display: flex;
+        flex-direction: column;
     }
 
     &__text {
-        font-size: .8125rem;
+        font-size: 0.8125rem;
         line-height: 1.5rem;
 
         @include tablet {
-            font-size: .875rem;
+            font-size: 0.875rem;
         }
 
         @include desktop {
             padding-right: 1.5rem;
         }
+    }
+
+    &__like {
+        cursor: pointer;
+        padding-top: 1rem;
     }
 }

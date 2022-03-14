@@ -3,8 +3,21 @@ import ReactTimeAgo from 'react-time-ago'
 import './ActiveVideoInfo.scss'
 import Views from '../../assets/images/icons/views.svg';
 import Likes from '../../assets/images/icons/likes.svg';
+import ThumbUpIcon from '@mui/icons-material/ThumbUp';
+import axios from 'axios';
 
-function ActiveVideoInfo({ activeVideoData }) {
+function ActiveVideoInfo({ activeVideoData, fetchVideoData }) {
+
+    const handleClick = () => {
+        axios.put(`http://localhost:8080/videos/${activeVideoData.id}/likes`)
+        .then(() => {
+            fetchVideoData(activeVideoData.id);
+        })
+        .catch(() => {
+
+        })
+    }
+
     return (
         <div className="details">
             <div className="details__header">
@@ -30,6 +43,7 @@ function ActiveVideoInfo({ activeVideoData }) {
             </div>
             <div className="details__body">
                 <p className="details__text">{activeVideoData.description}</p>
+                <ThumbUpIcon className="details__like" onClick={handleClick}/>
             </div>
         </div>
     )
