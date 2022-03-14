@@ -29,7 +29,8 @@ export class UploadForm extends Component {
     
     axios.post("http://localhost:8080/videos", {
       title: this.state.videoTitle,
-      description: this.state.videoDescription
+      description: this.state.videoDescription,
+      videoImage: this.state.videoImage
     })
     .then((response) => {
       console.log(response.data);
@@ -49,7 +50,7 @@ export class UploadForm extends Component {
 
   render() {
     return (
-      <form className="form" onSubmit={this.handleSubmit}>
+      <form className="form" onSubmit={this.handleSubmit} encType="multipart/form-data">
         <div className="form__body">
           <figure className="form__figure">
             <figcaption className="form__caption">VIDEO THUMBNAIL</figcaption>
