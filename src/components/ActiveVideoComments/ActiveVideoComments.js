@@ -48,7 +48,7 @@ class ActiveVideoComments extends Component {
               <textarea className="comments__textarea" id="newComment" name="newComment" rows="5" placeholder="Add a new comment" value={this.state.newComment} onChange={this.handleChange} />
             </div>
             <button className="comments__button" type="submit">
-              <img src={AddCommentIcon} className="comments__icon" />COMMENT
+              <img src={AddCommentIcon} className="comments__icon" alt="Add Comment Icon"/>COMMENT
             </button>
           </form>
         </div>

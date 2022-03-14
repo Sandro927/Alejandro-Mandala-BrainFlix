@@ -134,12 +134,12 @@
         }
     }
 
-    &__text--error:active, &__textarea--error:active {
+    &__text:active, &__textarea:active, &__file:active {
         border: 2px solid c.$brainflix-blue;
     }
 
 
-    &__text--error, &__textarea--error {
+    &__text--error, &__textarea--error, &__file--error {
         border: 2px solid #D22D2D;
     }
 
@@ -150,4 +150,5 @@
         transform: translateY(-50%);
         margin-left: 0.5rem;
     }
+
 }

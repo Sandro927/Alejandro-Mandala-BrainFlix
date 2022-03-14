@@ -52,7 +52,6 @@ export class VideoPlayer extends Component {
     const prevId = prevProps.match.params.id;
     if (prevId !== currId) {
       this.initializeActiveVideo();
-      console.log(this.state.activeVideoData);
       window.scrollTo(0, 0);
     }
   }

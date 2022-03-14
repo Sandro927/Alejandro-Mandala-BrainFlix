@@ -8,7 +8,8 @@ export class UploadForm extends Component {
   state = {
     videoTitle: "",
     videoDescription: "",
-    submit: false
+    videoImage: "",
+    submit: false,
   }
 
   handleChange = (e) => {
@@ -35,6 +36,7 @@ export class UploadForm extends Component {
       this.setState({
         videoTitle: "",
         videoDescription: "",
+        videoImage: "",
         submit: false
       })
     })
@@ -75,11 +77,21 @@ export class UploadForm extends Component {
               value={this.state.videoDescription}
               tabIndex="1"
             />
+
+            <label className="form__label" htmlFor="videoImage">ADD VIDEO IMAGE</label>
+            <input 
+              className={(this.state.submit && !this.state.videoImage) ?  "form__file form__file--error" : "form__file"}
+              name="videoImage" 
+              type='file' 
+              onChange={this.handleChange} 
+              value={this.state.videoImage}
+              tabIndex="1"
+            />
           </div>
         </div>
         <div className="form__buttons">
           <button className="form__submit">
-            <img className="form__icon" src={uploadIcon}></img>
+            <img className="form__icon" src={uploadIcon} alt="Upload form icon"></img>
             PUBLISH
           </button>
           <Link className="form__link" to='/'>CANCEL</Link>
