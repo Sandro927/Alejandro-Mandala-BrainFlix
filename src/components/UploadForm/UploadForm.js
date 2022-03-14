@@ -6,8 +6,8 @@ import uploadIcon from '../../assets/images/icons/publish.svg'
 import axios from 'axios';
 export class UploadForm extends Component {
   state = {
-    videoTitle: null,
-    videoDescription: null,
+    videoTitle: "",
+    videoDescription: "",
     submit: false
   }
 
@@ -78,7 +78,10 @@ export class UploadForm extends Component {
           </div>
         </div>
         <div className="form__buttons">
-          <input className="form__submit" type='Submit' defaultValue="Publish"></input>
+          <button className="form__submit">
+            <img className="form__icon" src={uploadIcon}></img>
+            PUBLISH
+          </button>
           <Link className="form__link" to='/'>CANCEL</Link>
         </div>
       </form>

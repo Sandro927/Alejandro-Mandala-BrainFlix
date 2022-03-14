@@ -2,7 +2,7 @@ import { Component } from 'react'
 import avatar from '../../assets/images/images/Mohan-muruge.jpg'
 import Comment from '../Comment/Comment'
 import './ActiveVideoComments.scss'
-import AddCommentIcon from '@mui/icons-material/AddComment';
+import AddCommentIcon from '../../assets/images/icons/add_comment.svg';
 import axios from 'axios'
 class ActiveVideoComments extends Component {
 
@@ -48,7 +48,7 @@ class ActiveVideoComments extends Component {
               <textarea className="comments__textarea" id="newComment" name="newComment" rows="5" placeholder="Add a new comment" value={this.state.newComment} onChange={this.handleChange} />
             </div>
             <button className="comments__button" type="submit">
-              <AddCommentIcon className="comments__icon" />COMMENT
+              <img src={AddCommentIcon} className="comments__icon" />COMMENT
             </button>
           </form>
         </div>

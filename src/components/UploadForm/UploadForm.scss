@@ -142,4 +142,12 @@
     &__text--error, &__textarea--error {
         border: 2px solid #D22D2D;
     }
+
+    &__icon {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-left: 0.5rem;
+    }
 }
